@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
-const API = 'http://localhost:3000/initalState';
+const API = 'https://pokeapi.co/api/v2/pokemon';
 
 const App = () => {
 
@@ -22,20 +22,20 @@ const App = () => {
 
       <Categories title='lista'>
         <Carousel>
-          {initialState?.mylist?.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
         </Carousel>
       </Categories>
 
       <Categories title='Tendencias'>
         <Carousel>
-          {initialState?.trends?.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
 
         </Carousel>
       </Categories>
       <Categories title='Originales de Platzi Video'>
         <Carousel>
-          {initialState?.trends?.map((item) => <CarouselItem key={item.id} {...item} />)}
-          <CarouselItem />
+          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
+          
         </Carousel>
       </Categories>
       <Footer />
