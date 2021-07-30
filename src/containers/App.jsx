@@ -21,23 +21,22 @@ const App = () => {
       <Search />
 
       <Categories title='lista'>
-        <Carousel>
-          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
+      <Carousel>
+        {initialState?.results?.map((item) => <CarouselItem key={item.name} name={item.name} url={item.url} />)}
         </Carousel>
       </Categories>
-
       <Categories title='Tendencias'>
         <Carousel>
-          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
+        {initialState?.results?.map((item) => <CarouselItem key={item.name} name={item.name} url={item.url}  />)}
 
         </Carousel>
-      </Categories>
-      <Categories title='Originales de Platzi Video'>
+        </Categories>
+
+        <Categories title='Originales de Platzi Video'>
         <Carousel>
-          {initialState?.results?.map((item) => <CarouselItem key={item.name} />)}
-          
+        {initialState?.results?.map((item) => <CarouselItem key={item.name} name={item.name} url={item.url} />)}
         </Carousel>
-      </Categories>
+        </Categories>
       <Footer />
     </div>
   );

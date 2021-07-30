@@ -3,6 +3,7 @@
     padding-left: 30px;
     width: 100%;
     position: relative;
+    padding-bottom: 80px;
   }
   
   .carousel__container {
@@ -11,6 +12,11 @@
     transition: 450ms transform, 450ms -webkit-transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 70px 0px;
+    margin: 10px 5px 5px 5px;
     padding-bottom: 10px;
+    overflow-x: auto;
+    height: 500px;
+  
+    scroll-snap-type: x mandatory;
+    
   }
